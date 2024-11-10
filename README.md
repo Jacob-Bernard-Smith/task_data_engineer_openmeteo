@@ -186,13 +186,11 @@ To move the retrieved API data from the UNIX environment into the DBeaver applic
 
 Created a CSV file for each of the three city tables with the following three commands:
 
->`\copy london TO '/tmp/london_table.csv' WITH (FORMAT CSV, HEADER);`
+>`\copy london TO '/tmp/london.csv' WITH (FORMAT CSV, HEADER);`
 
->`\copy amsterdam TO '/tmp/amsterdam_table.csv' WITH (FORMAT CSV, HEADER);`
+>`\copy amsterdam TO '/tmp/amsterdam.csv' WITH (FORMAT CSV, HEADER);`
 
->`\copy lisbon TO '/tmp/lisbon_table.csv' WITH (FORMAT CSV, HEADER);`
-
-For distinction, the names of the tables each have added "_table" into their names.
+>`\copy lisbon TO '/tmp/lisbon.csv' WITH (FORMAT CSV, HEADER);`
 
 The new files are created in the Ubuntu \tmp\ folder, and then moved manually from that directory to a Windows directory by dragging and dropping the files to the desktop.
 
