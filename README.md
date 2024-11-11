@@ -180,7 +180,7 @@ SELECT 'lisbon' , COUNT(*) FROM lisbon;
 
 Each table should have the same number of rows, in this case it is 96,432.
 
-## 6. Visualize Data with DBeaver
+# 6. Visualize Data with DBeaver
 
 To move the retrieved API data from the UNIX environment into the DBeaver application, I took these steps:
 
@@ -386,4 +386,19 @@ finally:
     cur.close()
     conn.close()
     print("Connection closed")
+```
+
+# 8. Data Model
+
+```
+┌──────────────┐     ┌───────────────────┐
+│     city     │     │      metrics      │
+├──────────────┤     ├───────────────────┤
+│ city_id (PK) ├─────┤ city_id (PK)      │
+│ city_name    │     │ datetime          │
+└──────────────┘     │ cloud_cover       │
+                     │ cloud_cover_low   │
+                     │ cloud_cover_mid   │
+                     │ cloud_cover_high  │
+                     └───────────────────┘
 ```
